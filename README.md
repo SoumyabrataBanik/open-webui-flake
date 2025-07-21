@@ -4,13 +4,15 @@
 
 A continuously updated, declarative Nix flake for packaging [Open-WebUI](https://github.com/open-webui/open-webui). This project provides a robust, reproducible build of the latest version of Open-WebUI, ready for seamless integration into NixOS systems.
 
-**CURRENT VERSION:** 0.6.18
+**CURRENT VERSION: 0.6.18**
 
 ## Description
 
-Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. This flake packages the entire application—from its Node.js frontend to its complex Python backend—into a single, self-contained derivation.
+Open WebUI is an extensible, feature-rich, and user-friendly self-hosted web interface for Large Language Models. This flake provides a self-contained package of the Open-WebUI frontend and backend server.
 
 By leveraging the power of Nix, this flake ensures that the package is built in a pure, hermetic environment. The result is a bit-for-bit reproducible artifact that is reliable, portable, and easy to manage.
+
+**Note:** This flake packages the Open-WebUI application itself. It does not include an LLM runner like Ollama, which must be installed and configured separately.
 
 ## Motivation
 
@@ -21,6 +23,7 @@ This flake aims to provide the Nix community with timely access to the newest fe
 ## Features
 
 *   **Up-to-Date:** Tracks recent versions of Open-WebUI.
+*   **CPU-Based:** Provides a reliable, CPU-only build, avoiding the need for complex GPU/CUDA configurations.
 *   **Modular Architecture:** A clean, separated build process for the frontend and backend, making it easy to maintain and debug.
 *   **Fully Reproducible:** All dependencies, from Node modules to Pyodide assets and Python packages, are pinned and hashed for guaranteed build consistency.
 *   **User-Friendly Configuration:** The package is pre-configured via a runtime wrapper to correctly handle its data directory at `~/.open-webui`, solving common file permission errors out of the box.
@@ -178,6 +181,16 @@ sudo nixos-rebuild switch --flake .#your-hostname
 - If you used the system-wide method, run: `open-webui serve`
 
 The server will start, and you can access it in your browser at the configured port (e.g., `http://localhost:3000`).
+
+## Future Plans
+
+This flake aims to be a comprehensive solution for deploying Open-WebUI. The following features are planned for future releases:
+
+-   [ ] **NixOS Module:** Create a dedicated NixOS module to simplify deployment. This would allow users to configure Open-WebUI declaratively as a systemd service directly from their `configuration.nix`.
+
+-   [ ] **GPU Support (CUDA):** Introduce an option to build the package with GPU acceleration enabled for users with NVIDIA hardware. This will require integration with the system's CUDA configuration for optimal performance of local ML models.
+
+-   [ ] **Integrated Ollama:** Explore the possibility of packaging Ollama within the flake or providing it as part of the NixOS module, creating a truly all-in-one, self-contained AI environment.
 
 ## Acknowledgements
 
