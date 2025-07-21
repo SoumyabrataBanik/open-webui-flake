@@ -28,6 +28,7 @@ jobs:
         run: nix flake check
 
   build:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     name: "Full Build"
     runs-on: ubuntu-latest
     steps:
@@ -43,4 +44,4 @@ jobs:
         with:
           name: nix-community
       - name: "Build the Flake Package"
-        uses: nix build .# --print-build-logs
+        run: nix build .# --print-build-logs
