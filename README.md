@@ -1,10 +1,6 @@
 # Open-WebUI Nix Flake
 
-[![Flake Check Status][check-badge]][actions-link] [![Build Status][build-badge]][actions-link]
-
-[flake-check-badge]: https://github.com/SoumyabrataBanik/open-webui-flake/actions/workflows/build.yml/badge.svg?query=job%3A"Flake+Check"
-[flake-build-badge]: https://github.com/SoumyabrataBanik/open-webui-flake/actions/workflows/build.yml/badge.svg?query=job%3A"Full+Build"
-[actions-link]: https://github.com/SoumyabrataBanik/open-webui-flake/actions/workflows/build.yml
+[![Flake Build Checks](https://github.com/SoumyabrataBanik/open-webui-flake/actions/workflows/build.yml/badge.svg)](https://github.com/SoumyabrataBanik/open-webui-flake/actions/workflows/build.yml)
 
 A continuously updated, declarative Nix flake for packaging [Open-WebUI](https://github.com/open-webui/open-webui). This project provides a robust, reproducible build of the latest version of Open-WebUI, ready for seamless integration into NixOS systems.
 
