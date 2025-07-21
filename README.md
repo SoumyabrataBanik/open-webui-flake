@@ -4,6 +4,8 @@
 
 A continuously updated, declarative Nix flake for packaging [Open-WebUI](https://github.com/open-webui/open-webui). This project provides a robust, reproducible build of the latest version of Open-WebUI, ready for seamless integration into NixOS systems.
 
+**CURRENT VERSION:** 0.6.18
+
 ## Description
 
 Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. This flake packages the entire application—from its Node.js frontend to its complex Python backend—into a single, self-contained derivation.

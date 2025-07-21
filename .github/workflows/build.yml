@@ -1,4 +1,4 @@
-name: "CI Checks"
+name: "Flake Build Checks"
 
 on:
   push:
