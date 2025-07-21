@@ -1,0 +1,46 @@
+name: "CI Checks"
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+
+  check:
+    name: "Flake Check"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+      - name: "Install Nix"
+        uses: cachix/install-nix-action@v27
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: "Run flake check"
+        run: nix flake check
+
+  build:
+    name: "Full Build"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+      - name: "Install Nix"
+        uses: cachix/install-nix-action@v27
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: "Setup Cachix"
+        uses: cachix/cachix-action@v14
+        with:
+          name: nix-community
+      - name: "Build the Flake Package"
+        uses: nix build .# --print-build-logs
