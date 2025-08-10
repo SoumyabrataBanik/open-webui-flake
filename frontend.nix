@@ -20,7 +20,7 @@ pkgs.buildNpmPackage rec {
     sha256 = "sha256-SeK3RKqqxxLLf9DN5xXuPw6ZPblE6OX9VRXMzdrmTV4=";
   };
 
-  npmDepsHash = "sha256-HrsumAszjeUxKsBwmFTy7gdkF7/zu9XxOSEapmG1c7M=";
+  npmDepsHash = "sha256-5Oc87dbkGDMOLt/hxTwXD++cghrqcGrHzOER/EMZlIo=";
 
   npmFlags = [ "--legacy-peer-deps" ];
 
