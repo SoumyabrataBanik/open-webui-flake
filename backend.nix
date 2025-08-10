@@ -137,6 +137,7 @@ pkgs.python3Packages.buildPythonApplication rec {
       gcp-storage-emulator
       moto
       posthog
+      oracledb
     ]
     ++ moto.optional-dependencies.s3
     ++ pyjwt.optional-dependencies.crypto
@@ -164,21 +165,5 @@ pkgs.python3Packages.buildPythonApplication rec {
       inherit (pkgs.nixosTests) open-webui;
     };
     inherit frontend;
-  };
-
-  meta = {
-    description = "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)";
-    homepage = "https://github.com/open-webui/open-webui";
-    license = {
-      fullName = "Open WebUI License";
-      url = "https://github.com/open-webui/open-webui/tree/main?tab=License-1-ov-file#readme";
-    };
-    longDescription = ''
-      Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline. It supports various LLM runners like Ollama and OpenAI-compatible APIs, with built-in inference engine for RAG, making it a powerful AI deployment solution.
-    '';
-    mainProgram = "open-webui";
-    maintainers = with pkgs.lib.maintainers; [
-      hiskingisdone
-    ];
   };
 }
