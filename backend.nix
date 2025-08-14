@@ -148,10 +148,8 @@ pkgs.python3Packages.buildPythonApplication rec {
 
   makeWrapperArgs = [
     ''--run "export DATA_DIR=\$HOME/.open-webui"''
-    ''--run "export PORT=\"3000\""''
     ''--set FRONTEND_BUILD_DIR "${frontend}/frontend"''
     ''--prefix PATH : "${pkgs.ffmpeg-headless}/bin"''
-    ''--prefix PATH : "${pkgs.ffmpeg}/bin"''
   ];
 
   # makeWrapperArgs = [
