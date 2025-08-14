@@ -147,7 +147,8 @@ pkgs.python3Packages.buildPythonApplication rec {
   pythonImportsCheck = [ "open_webui" ];
 
   makeWrapperArgs = [
-    ''--run "export DATA_DIR=\$HOME/.open-webui"''
+    #''--run "export DATA_DIR=\$HOME/.open-webui"''
+    #''--run "export WEBUI_SECRET_KEY''
     ''--set FRONTEND_BUILD_DIR "${frontend}/frontend"''
     ''--prefix PATH : "${pkgs.ffmpeg-headless}/bin"''
   ];

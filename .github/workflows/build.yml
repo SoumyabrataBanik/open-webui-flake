@@ -1,5 +1,4 @@
 name: "Flake Build Checks"
-
 on:
   push:
     branches:
@@ -10,9 +9,7 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-
 jobs:
-
   check:
     name: "Flake Check"
     runs-on: ubuntu-latest
@@ -26,7 +23,6 @@ jobs:
             experimental-features = nix-command flakes
       - name: "Run flake check"
         run: nix flake check
-
   build:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     name: "Full Build"
