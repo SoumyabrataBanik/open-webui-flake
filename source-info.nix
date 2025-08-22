@@ -13,6 +13,6 @@ in
     owner = "open-webui";
     repo = "open-webui";
     tag = "v${version}";
-    hash = "sha256-G637A6Iof1REYznsKhY/gWL1sv4vL8CNmZNhqMlV4FA=";
+    hash = "sha256-XB3cwxtcOVoAwGJroZuPT8XwaCo3wpkn2KIEuuXMeu4=";
   };
 }
