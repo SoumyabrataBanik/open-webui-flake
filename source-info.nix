@@ -2,7 +2,7 @@
 
 let
   pname = "open-webui";
-  version = "0.6.23";
+  version = "0.6.25";
 in
 
 {
