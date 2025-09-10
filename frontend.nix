@@ -14,13 +14,13 @@ pkgs.buildNpmPackage rec {
 
   # This is the backend for the run-on-client browser python execution
   # Must match the lock file in Open-WebUI official repo.
-  pyodideVersion = "0.27.3";
+  pyodideVersion = "0.28.2";
   pyodide = pkgs.fetchurl {
     url = "https://github.com/pyodide/pyodide/releases/download/${pyodideVersion}/pyodide-${pyodideVersion}.tar.bz2";
-    sha256 = "sha256-SeK3RKqqxxLLf9DN5xXuPw6ZPblE6OX9VRXMzdrmTV4=";
+    sha256 = "sha256-MQIRdOj9yVVsF+nUNeINnAfyA6xULZFhyjuNnV0E5+c=";
   };
 
-  npmDepsHash = "sha256-xZtES8qZ7MTt/OviEqGmGO3D3BuOpMGHjnBuSsdFJgM=";
+  npmDepsHash = "sha256-vsgdf7+h16VBF+bTxzdNeHNzsYV65KWNZ6Ga3N7fB5A=";
 
   npmFlags = [ "--legacy-peer-deps" ];
 

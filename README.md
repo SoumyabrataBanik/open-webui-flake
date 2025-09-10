@@ -4,7 +4,9 @@
 
 A continuously updated, declarative Nix flake for packaging [Open-WebUI](https://github.com/open-webui/open-webui). This project provides a robust, reproducible build of the latest version of Open-WebUI, ready for seamless integration into NixOS systems.
 
-<p align="center">**CURRENT VERSION: 0.6.26**</p>
+<p align="center">
+    <strong>CURRENT VERSION: 0.6.26</strong>
+</p>
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 let
   pname = "open-webui";
-  version = "0.6.26";
+  version = "0.6.28";
 in
 
 {
@@ -13,6 +13,6 @@ in
     owner = "open-webui";
     repo = "open-webui";
     tag = "v${version}";
-    hash = "sha256-ourzYHwVSlM4nqEbkKf6PsNfNkW8quXdcBSW0p16pIg=";
+    hash = "sha256-677M1IxWhdJ3AO8DPlW4eUYnOo/mCNu+11IPdaey9ks=";
   };
 }
